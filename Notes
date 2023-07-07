@@ -1,0 +1,91 @@
+https://github.com/DarkLycn1976/CEH-Practical-Notes-and-Tools
+
+https://github.com/infovault-Ytube/CEH-Practical-Notes
+
+https://github.com/System-CTL/CEH_CHEAT_SHEET
+
+
+----------------------Android-----------------------
+┌─[root@parrot]─[/home/parrot]
+└──╼ #adb 64.186.16.224
+adb: unknown command 64.186.16.224
+┌─[✗]─[root@parrot]─[/home/parrot]
+└──╼ #adb 64.186.16.224:5555
+adb: unknown command 64.186.16.224:5555
+┌─[✗]─[root@parrot]─[/home/parrot]
+└──╼ #adb connect 64.186.16.224:5555
+* daemon not running; starting now at tcp:5037
+^C
+┌─[✗]─[root@parrot]─[/home/parrot]
+└──╼ #adb connect 64.186.16.224 
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+missing port in specification: tcp:64.186.16.224
+┌─[root@parrot]─[/home/parrot]
+└──╼ #adb connect 64.186.16.224 
+missing port in specification: tcp:64.186.16.224
+┌─[root@parrot]─[/home/parrot]
+└──╼ #adb connect 64.186.16.224:5555
+failed to authenticate to 64.186.16.224:5555
+┌─[root@parrot]─[/home/parrot]
+└──╼ #adb devices
+List of devices attached
+64.186.16.224:5555	unauthorized
+
+┌─[root@parrot]─[/home/parrot]
+└──╼ #adb connect 197.130.239.10:5555
+connected to 197.130.239.10:5555
+┌─[root@parrot]─[/home/parrot]
+└──╼ #adb shell 
+error: more than one device/emulator
+┌─[✗]─[root@parrot]─[/home/parrot]
+└──╼ #adb devices
+List of devices attached
+197.130.239.10:5555	device
+64.186.16.224:5555	unauthorized
+
+┌─[root@parrot]─[/home/parrot]
+└──╼ #adb disconnect 64.186.16.224:5555
+disconnected 64.186.16.224:5555
+┌─[root@parrot]─[/home/parrot]
+└──╼ #adb shell 
+error: closed
+┌─[✗]─[root@parrot]─[/home/parrot]
+└──╼ #adb devices
+List of devices attached
+197.130.239.10:5555	device
+
+┌─[root@parrot]─[/home/parrot]
+└──╼ #adb shell 
+error: closed
+┌─[✗]─[root@parrot]─[/home/parrot]
+└──╼ #adb disconnect 197.130.239.10:5555
+disconnected 197.130.239.10:5555
+┌─[root@parrot]─[/home/parrot]
+└──╼ #adb connect 155.33.224.60:5555
+connected to 155.33.224.60:5555
+┌─[root@parrot]─[/home/parrot]
+└──╼ #adb shell 
+rk3326_m2g:/ $                                               rk3326_m2g:/ $                                               rk3326_m2g:/ $ ls                                           
+acct         init.environ.rc            postinstall 
+bin          init.rc                    proc        
+bugreports   init.recovery.rk30board.rc product     
+cache        init.usb.configfs.rc       res         
+charger      init.usb.rc                sbin        
+config       init.zygote32.rc           sdcard      
+d            init.zygote64_32.rc        storage     
+data         lost+found                 sys         
+default.prop metadata                   system      
+dev          mnt                        tmp         
+etc          odm                        ueventd.rc  
+init         oem                        vendor      
+rk3326_m2g:/ $ cd sdcard                                                  
+rk3326_m2g:/sdcard $ ls
+Alarms                  Movies        Podcasts   screenshot-2023-5-30-14-48-4.png 
+Android                 Music         Ringtones  screenshot-2023-7-6-15-46-48.png 
+Chess_2.8.2_Apkpure.apk Notifications screen.mp4 
+DCIM                    Pictures      screen.png 
+rk3326_m2g:/sdcard $
+
+
+-----------------------------------------
